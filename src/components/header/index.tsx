@@ -1,21 +1,21 @@
-import { DarkModeOutlined, LightModeOutlined } from "@mui/icons-material";
+import React, { useContext } from "react";
+import { useGetIdentity } from "@refinedev/core";
 import {
   AppBar,
-  Avatar,
   IconButton,
+  Avatar,
   Stack,
   Toolbar,
   Typography,
 } from "@mui/material";
-import { useGetIdentity } from "@refinedev/core";
-import React, { useContext } from "react";
+import { DarkModeOutlined, LightModeOutlined } from "@mui/icons-material";
 
 import { ColorModeContext } from "../../contexts/color-mode";
 
 type IUser = {
-  id: number;
-  name: string;
-  avatar: string;
+    id: number;
+    name: string;
+    avatar: string;
 };
 
 export const Header: React.FC = () => {
@@ -28,10 +28,10 @@ export const Header: React.FC = () => {
     <AppBar color="default" position="sticky" elevation={1}>
       <Toolbar>
         <Stack
-          direction="row"
-          width="100%"
-          justifyContent="flex-end"
-          alignItems="center"
+            direction="row"
+            width="100%"
+            justifyContent="flex-end"
+            alignItems="center"
         >
           <IconButton
             onClick={() => {
